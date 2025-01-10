@@ -13,7 +13,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-4xl mt-8">
             <div className="flex-1 mb-8 sm:mb-0 sm:mr-8">
               <h1 className="text-4xl font-bold mb-4">
-                Hi, I'm Your Name
+                Hi, I'm Ajeet
               </h1>
               <h2 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
                 Linux & DevOps Engineer | Cloud Enthusiast
