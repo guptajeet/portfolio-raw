@@ -1,4 +1,4 @@
-# My Portfolio Project
+# Portfolio
 
 ## Description
 This is a personal portfolio project designed to showcase my skills, projects, and achievements. It includes various sections such as an about me page, a projects gallery, and contact information.
