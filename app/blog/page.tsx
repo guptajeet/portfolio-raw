@@ -1,28 +1,37 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
-const blogPosts = [
-  {
-    title: '5 Linux Commands Every Admin Should Know',
-    description: 'Explore essential Linux commands that will boost your productivity as a system administrator.',
-    date: '2023-05-15',
-    slug: '5-linux-commands-every-admin-should-know',
-  },
-  {
-    title: 'Automating AWS Infrastructure with Terraform',
-    description: 'Learn how to use Terraform to create and manage your AWS infrastructure as code.',
-    date: '2023-06-02',
-    slug: 'automating-aws-infrastructure-with-terraform',
-  },
-  {
-    title: 'Docker Best Practices for Production Environments',
-    description: 'Discover key Docker practices to ensure your containers are secure, efficient, and production-ready.',
-    date: '2023-06-20',
-    slug: 'docker-best-practices-for-production',
-  },
-]
+async function getBlogPosts() {
+  const query = `
+    query {
+      user(username: "guptajeet") {
+        publication {
+          posts(page: 1) {
+            title
+            brief
+            slug
+            dateAdded
+          }
+        }
+      }
+    }
+  `;
 
-export default function Blog() {
+  const response = await fetch('https://api.hashnode.com', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query }),
+  });
+
+  const data = await response.json();
+  return data.data.user.publication.posts;
+}
+
+export default async function Blog() {
+  const blogPosts = await getBlogPosts();
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Blog</h1>
@@ -31,13 +40,13 @@ export default function Blog() {
           <Card key={index}>
             <CardHeader>
               <CardTitle>{post.title}</CardTitle>
-              <CardDescription>{post.date}</CardDescription>
+              <CardDescription>{new Date(post.dateAdded).toLocaleDateString()}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>{post.description}</p>
+              <p>{post.brief}</p>
             </CardContent>
             <CardFooter>
-              <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:underline">
+              <Link href={`https://guptajeet.hashnode.dev/${post.slug}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                 Read more
               </Link>
             </CardFooter>
