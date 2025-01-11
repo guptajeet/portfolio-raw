@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from '@/components/ui/use-toast'
+import Link from 'next/link'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -34,11 +35,22 @@ export default function Contact() {
             I'm always open to new opportunities and collaborations. Feel free to reach out if you have any questions or just want to say hello!
           </p>
           <p className="mb-2">
-            <strong>Location:</strong> Pune, India
+            <strong>Location:</strong> Varanasi, India
           </p>
           <p className="mb-2">
-            <strong>Email:</strong> your.email@example.com
+            <strong>Email:</strong> guptajeet369@gmail.com
           </p>
+          <div className="flex space-x-4 mt-4">
+            <Link href="https://www.linkedin.com/in/ajeetgupta" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              LinkedIn
+            </Link>
+            <Link href="https://guptajeet.hashnode.dev/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              Hashnode
+            </Link>
+            <Link href="https://github.com/ajeetgupta" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              GitHub
+            </Link>
+          </div>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
