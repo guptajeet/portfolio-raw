@@ -1,27 +1,32 @@
 import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
 const projects = [
   {
-    title: 'AWS Auto-Scaling Infrastructure',
-    description: 'Designed and implemented a highly available and scalable infrastructure on AWS using Terraform.',
-    technologies: ['AWS', 'Terraform', 'Docker', 'Ansible'],
-    github: 'https://github.com/yourusername/aws-auto-scaling',
-    demo: 'https://example.com/aws-demo',
+    title: 'Multi-Tier Web Application Deployment with Terraform',
+    description: 'Automated deployment of a scalable multi-tier web application on AWS using Terraform, leveraging Free Tier resources.',
+    technologies: ['Terraform', 'AWS', 'EC2', 'RDS', 'S3', 'Auto Scaling'],
+    github: 'https://github.com/ajeetgupta/terraform-aws-webapp',
   },
   {
-    title: 'Kubernetes Monitoring Stack',
-    description: 'Set up a comprehensive monitoring solution for Kubernetes clusters using Prometheus and Grafana.',
-    technologies: ['Kubernetes', 'Prometheus', 'Grafana', 'Helm'],
-    github: 'https://github.com/yourusername/k8s-monitoring',
+    title: 'Multi-Container Weather Dashboard Application',
+    description: 'Flask-based web application providing current weather information using a multi-container setup with Podman/Docker Compose.',
+    technologies: ['Flask', 'Podman', 'Docker', 'PostgreSQL', 'Redis'],
+    github: 'https://github.com/ajeetgupta/weather-dashboard',
   },
   {
-    title: 'CI/CD Pipeline Automation',
-    description: 'Developed a robust CI/CD pipeline using Jenkins, Docker, and Kubernetes for automated testing and deployment.',
-    technologies: ['Jenkins', 'Docker', 'Kubernetes', 'Groovy'],
-    github: 'https://github.com/yourusername/cicd-automation',
+    title: 'Automated Backup and Restore System',
+    description: 'Bash-based solution for automating backups with incremental sync, compression, encryption, and remote transfers.',
+    technologies: ['Bash', 'rsync', 'tar', 'GPG'],
+    github: 'https://github.com/ajeetgupta/backup-restore-system',
+  },
+  {
+    title: 'Linux Performance Monitoring Tool',
+    description: 'Tool for logging system metrics and providing real-time monitoring with alerts using Grafana and Prometheus.',
+    technologies: ['Bash', 'Grafana', 'Prometheus', 'Docker'],
+    github: 'https://github.com/ajeetgupta/linux-performance-monitor',
   },
 ]
 
