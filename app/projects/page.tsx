@@ -48,7 +48,7 @@ export default function Projects() {
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="flex justify-between">
+            <div className="flex justify-between p-6 pt-0">
               <Button asChild variant="outline">
                 <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   GitHub
@@ -61,7 +61,7 @@ export default function Projects() {
                   </Link>
                 </Button>
               )}
-            </CardFooter>
+            </div>
           </Card>
         ))}
       </div>
