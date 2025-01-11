@@ -3,12 +3,12 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 
 const skills = [
-  { name: 'Linux', level: 90 },
-  { name: 'Docker', level: 85 },
-  { name: 'Terraform', level: 80 },
-  { name: 'AWS', level: 85 },
-  { name: 'Python', level: 75 },
-  { name: 'Bash', level: 80 },
+  { name: 'Linux Administration', level: 90 },
+  { name: 'Cloud Management (AWS)', level: 85 },
+  { name: 'Automation Scripting', level: 80 },
+  { name: 'Configuration Management', level: 75 },
+  { name: 'Containerization', level: 85 },
+  { name: 'Monitoring and Performance Tools', level: 80 },
 ]
 
 export default function About() {
@@ -19,13 +19,16 @@ export default function About() {
         <div>
           <h2 className="text-2xl font-semibold mb-4">Background</h2>
           <p className="mb-4">
-            I'm a passionate Linux and DevOps Engineer with over 5 years of experience in designing, implementing, and managing cloud infrastructure. My expertise lies in automating deployments, optimizing performance, and ensuring high availability of systems.
+            I'm Ajeet Gupta, a passionate Linux, Cloud and DevOps Engineer with nearly 3 years of experience in system administration and team leadership. I specialize in managing on-premise and cloud infrastructures, with a particular focus on VMware and AWS technologies.
           </p>
           <p className="mb-4">
-            I hold certifications in AWS, Docker, and Kubernetes, and I'm always eager to learn and adapt to new technologies in the ever-evolving world of cloud computing.
+            As a Senior System Executive and Team Lead at Cognizant, I directed the operations of a dedicated L1 Support Team, facilitating smooth operations and delivering exceptional service to clients.
+          </p>
+          <p className="mb-4">
+            I hold a B.E. in Electronics and Instrumentation from Lakshmi Narain College of Technology, Bhopal (2019). I'm well versed in Linux, DevOps, and AWS Cloud, and I'm always eager to learn and adapt to new technologies in the ever-evolving world of cloud computing.
           </p>
           <Button asChild className="mt-4">
-            <Link href="/YourName_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/AjeetGupta_Resume.pdf" target="_blank" rel="noopener noreferrer">
               Download Resume
             </Link>
           </Button>
