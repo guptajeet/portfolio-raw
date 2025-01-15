@@ -5,10 +5,10 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 
 const commands = {
   help: 'Available commands: help, whoami, skills, projects, contact',
-  whoami: 'Your Name - Linux & DevOps Engineer | Cloud Enthusiast',
-  skills: 'Linux, Docker, Kubernetes, AWS, Terraform, Python, Bash',
+  whoami: 'Ajeet Gupta - Linux, System and DevOps Admin | Cloud Enthusiast',
+  skills: 'Linux, Docker, AWS, Terraform, Python, Bash',
   projects: 'Check out my projects page for a list of my work!',
-  contact: 'Email: your.email@example.com | Location: Pune, India',
+  contact: 'Email: guptajeet369@gmail.com | Location: Pune, India',
 }
 
 export default function Terminal() {
