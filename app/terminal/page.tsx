@@ -6,9 +6,9 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 
 const commands = {
   help: 'Available commands: help, whoami, ls, pwd, clear',
-  whoami: 'Your Name - Linux & DevOps Engineer',
+  whoami: 'Ajeet - Linux & DevOps Engineer',
   ls: 'Documents  Projects  blog.md  resume.pdf',
-  pwd: '/home/yourname',
+  pwd: '/home/Ajeet',
 }
 
 export default function Terminal() {
