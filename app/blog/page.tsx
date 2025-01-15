@@ -1,78 +1,30 @@
-import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { getPosts } from '@/lib/get-posts'
+import { BlogPosts } from '@/components/blog-posts'
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 
-async function getBlogPosts() {
-  const query = `
-    query {
-      user(username: "guptajeet") {
-        publication {
-          posts(page: 1) {
-            title
-            brief
-            slug
-            dateAdded
-          }
-        }
-      }
-    }
-  `;
-
+export default async function Page() {
   try {
-    const response = await fetch('https://api.hashnode.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query }),
-      next: { revalidate: 3600 } // Revalidate every hour
-    });
+    const posts = await getPosts('guptajeet') // Replace with your Hashnode username
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.data?.user?.publication?.posts || [];
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">My Blog</h1>
+        <BlogPosts posts={posts} />
+      </div>
+    )
   } catch (error) {
-    console.error('Error fetching blog posts:', error);
-    return [];
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertTitle>Error</AlertTitle>
+          <AlertDescription>
+            {error instanceof Error ? error.message : 'An unexpected error occurred'}
+          </AlertDescription>
+        </Alert>
+      </div>
+    )
   }
-}
-
-export default async function Blog() {
-  const blogPosts = await getBlogPosts();
-
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Blog</h1>
-      {blogPosts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
-                <CardDescription>{new Date(post.dateAdded).toLocaleDateString()}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="line-clamp-3">{post.brief}</p>
-              </CardContent>
-              <div className="p-6 pt-0">
-                <Link href={`https://guptajeet.hashnode.dev/${post.slug}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                  Read more
-                </Link>
-              </div>
-            </Card>
-          ))}
-        </div>
-      ) : (
-        <div className="text-center">
-          <p className="text-xl mb-4">No blog posts found. Please check back later.</p>
-          <Link href="https://guptajeet.hashnode.dev/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-            Visit Hashnode Blog
-          </Link>
-        </div>
-      )}
-    </div>
-  )
 }
 
