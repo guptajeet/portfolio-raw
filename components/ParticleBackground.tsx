@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import { useEffect, useRef } from 'react'
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -66,3 +66,4 @@ export default function ParticleBackground() {
   }, [])
   return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full -z-10" />
 }
+*/
