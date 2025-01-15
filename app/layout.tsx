@@ -7,8 +7,8 @@ import { ThemeProvider } from './components/ThemeProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Ajeet Gupta - Linux & DevOps Engineer | Cloud Enthusiast',
-  description: 'Professional portfolio of Ajeet Gupta, a Linux, DevOps, and Cloud Engineer showcasing projects, skills, and technical blog.',
+  title: 'Ajeet Gupta - Linux, System and Devops Admin | Cloud Enthusiast',
+  description: 'Professional portfolio of Ajeet Gupta, a Linux, System, DevOps, and Cloud Engineer showcasing projects, skills, and technical blog.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -19,13 +19,13 @@ export const metadata = {
         url: 'https://v0-guptajeet.vercel.app/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ajeet Gupta - Linux & DevOps Engineer',
+        alt: 'Ajeet Gupta - Linux, System, Cloud and Devops Engineer',
       },
     ],
   },
   twitter: {
-    handle: '@ajeetgupta',
-    site: '@ajeetgupta',
+    handle: '@Ajeet47343093',
+    site: '@Ajeet47343093',
     cardType: 'summary_large_image',
   },
 }
