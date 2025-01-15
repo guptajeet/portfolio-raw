@@ -8,25 +8,23 @@ const projects = [
     title: 'Multi-Tier Web Application Deployment with Terraform',
     description: 'Automated deployment of a scalable multi-tier web application on AWS using Terraform, leveraging Free Tier resources.',
     technologies: ['Terraform', 'AWS', 'EC2', 'RDS', 'S3', 'Auto Scaling'],
-    github: 'https://github.com/ajeetgupta/terraform-aws-webapp',
+    github: 'https://github.com/guptajeet/TerraWebStack',
   },
   {
     title: 'Multi-Container Weather Dashboard Application',
     description: 'Flask-based web application providing current weather information using a multi-container setup with Podman/Docker Compose.',
     technologies: ['Flask', 'Podman', 'Docker', 'PostgreSQL', 'Redis'],
-    github: 'https://github.com/ajeetgupta/weather-dashboard',
+    github: 'https://github.com/guptajeet/Podman_Weather_App',
   },
   {
     title: 'Automated Backup and Restore System',
     description: 'Bash-based solution for automating backups with incremental sync, compression, encryption, and remote transfers.',
     technologies: ['Bash', 'rsync', 'tar', 'GPG'],
-    github: 'https://github.com/ajeetgupta/backup-restore-system',
   },
   {
     title: 'Linux Performance Monitoring Tool',
     description: 'Tool for logging system metrics and providing real-time monitoring with alerts using Grafana and Prometheus.',
     technologies: ['Bash', 'Grafana', 'Prometheus', 'Docker'],
-    github: 'https://github.com/ajeetgupta/linux-performance-monitor',
   },
 ]
 
