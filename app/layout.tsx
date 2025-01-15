@@ -12,11 +12,11 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ajeetgupta.com',
+    url: 'https://v0-guptajeet.vercel.app/',
     site_name: 'Ajeet Gupta - Tech Portfolio',
     images: [
       {
-        url: 'https://ajeetgupta.com/og-image.jpg',
+        url: 'https://v0-guptajeet.vercel.app/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Ajeet Gupta - Linux & DevOps Engineer',
