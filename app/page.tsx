@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import Terminal from '@/components/Terminal'
-/*import ParticleBackground from '@/components/ParticleBackground'*/
+import ParticleBackground from '@/components/ParticleBackground'
 
 export default function Home() {
   return (
