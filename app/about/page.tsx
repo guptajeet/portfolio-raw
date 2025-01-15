@@ -28,7 +28,7 @@ export default function About() {
             I hold a B.E. in Electronics and Instrumentation from Lakshmi Narain College of Technology, Bhopal (2019). I'm well versed in Linux, DevOps, and AWS Cloud, and I'm always eager to learn and adapt to new technologies in the ever-evolving world of cloud computing.
           </p>
           <Button asChild className="mt-4">
-            <Link href="/AjeetGupta_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/documents/AjeetGupta_Resume.pdf" target="_blank" rel="noopener noreferrer">
               Download Resume
             </Link>
           </Button>
