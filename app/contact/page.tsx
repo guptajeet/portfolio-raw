@@ -41,13 +41,13 @@ export default function Contact() {
             <strong>Email:</strong> guptajeet369@gmail.com
           </p>
           <div className="flex space-x-4 mt-4">
-            <Link href="https://www.linkedin.com/in/ajeetgupta" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+            <Link href="https://www.linkedin.com/in/ajeet-g-456333194/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
               LinkedIn
             </Link>
             <Link href="https://guptajeet.hashnode.dev/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
               Hashnode
             </Link>
-            <Link href="https://github.com/ajeetgupta" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+            <Link href="https://github.com/guptajeet" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
               GitHub
             </Link>
           </div>
