@@ -19,13 +19,13 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+          <Link href="https://github.com/guptajeet" target="_blank" rel="noreferrer">
             <GitHubLogoIcon className="h-5 w-5" />
           </Link>
-          <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
+          <Link href="https://www.linkedin.com/in/ajeet-g-456333194/" target="_blank" rel="noreferrer">
             <LinkedInLogoIcon className="h-5 w-5" />
           </Link>
-          <Link href="https://twitter.com/yourusername" target="_blank" rel="noreferrer">
+          <Link href="https://x.com/Ajeet47343093" target="_blank" rel="noreferrer">
             <TwitterLogoIcon className="h-5 w-5" />
           </Link>
         </div>
